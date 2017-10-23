@@ -12,23 +12,25 @@ int _printf(const char *format, ...)
 	form_mod mods[] = {
 		{"c", print_c},
 		{"s", print_s},
+		{"d", print_i},
+		{"i", print_i},
+		{"%", print_p},
 		{NULL, NULL}
 	};
 
 	va_start(list, format);
 	while(format && format[i])
 	{
-		if (format[i] == '%' && format[i + 1] == '%')
-			_putchar('%'), i += 2;
-		/* call function that prints the characters after % */
-		else if (format[i] == '%')
+		if (format[i] == '%')
 		{
 			while (mods[j].mod)
 			{
 				/* explain */
 				if (format[i + 1] == *(mods[j].mod))
-					/* explain */
-					sum += mods[j].f(list), i += 2;
+				{
+					sum += mods[j].f(list);
+					i += 2;
+				}
 				j++;
 			}
 		}
