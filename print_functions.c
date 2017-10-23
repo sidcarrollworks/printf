@@ -1,22 +1,18 @@
 #include "holberton.h"
-#include <stdarg.h>
 
 /**
  * print_int - prints an integer number
  *
  *
  */
-int print_int(va_list arg)
+int print_i(va_list list)
 {
-}
+	int n = va_arg(list, int);
+	_printihelp(n);
 
-/**
- * print_float - prints a floating point number
- *
- *
- */
-int print_float(va_list arg)
-{
+
+
+	return (1);
 }
 
 /**
@@ -24,8 +20,14 @@ int print_float(va_list arg)
  *
  *
  */
-int print_char(va_list arg)
+int print_c(va_list list)
 {
+	char c = va_arg(list, int);
+
+	if (!c)
+		c = ' ';
+	_putchar(c);
+	return (1);
 }
 
 /**
@@ -33,6 +35,18 @@ int print_char(va_list arg)
  *
  *
  */
-int print_str(va_list arg)
+int print_s(va_list list)
 {
+	int i = 0;
+	int sum = 0;
+	char *s = va_arg(list, char *);
+
+	if (s == NULL)
+		s = "(null)";
+	while (s[i])
+	{
+		_putchar(s[i]);
+		i++, sum++;
+	}
+	return (sum);
 }
