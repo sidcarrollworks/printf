@@ -37,6 +37,8 @@ int _printf(const char *format, ...)
 		sum++;
 		i++;
 	}
+	if (format == NULL)
+		sum = -1;
 	va_end(list);
 	return (sum);
 }
