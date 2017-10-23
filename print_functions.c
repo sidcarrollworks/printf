@@ -35,6 +35,7 @@ int print_c(va_list list)
  *
  *
  */
+
 int print_s(va_list list)
 {
 	int i = 0;
