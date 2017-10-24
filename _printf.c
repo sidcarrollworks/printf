@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
  * _printf - replicates the printf function
- * @format: input string with format modifiers
+ * @format: input string with format specifications
  * Return: number of characters printed
  */
 int _printf(const char *format, ...)
@@ -21,8 +21,8 @@ int _printf(const char *format, ...)
 	if (format == NULL) /* If string input is NULL, return -1 */
 		return (-1);
 	va_start(list, format);
-	/* j is the struct index, i is the format index, sum is the # of chars printed */
-	j = 0, i = 0, sum = 0;
+	/* i is the format index, j is the mods index, sum is the # of chars printed */
+	i = 0, j = 0, sum = 0;
 	while (format[i]) /* Iterate through string argument */
 	{
 		if (format[i] == '%') /* Find format specifier */
