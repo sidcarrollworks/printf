@@ -3,7 +3,7 @@
 /**
  * _printf - replicates the printf function
  * @format: input string with format modifiers
- * Return: number of characters
+ * Return: number of characters printed
  */
 int _printf(const char *format, ...)
 {
@@ -18,35 +18,36 @@ int _printf(const char *format, ...)
 		{NULL, NULL}
 	};
 
-	if (format == NULL)
+	if (format == NULL) /* If string input is NULL, return -1 */
 		return (-1);
 	va_start(list, format);
+	/* j is the struct index, i is the format index, sum is the # of chars printed */
 	j = 0, i = 0, sum = 0;
-	while (format[i])
+	while (format[i]) /* Iterate through string argument */
 	{
-		if (format[i] == '%')
+		if (format[i] == '%') /* Find format specifier */
 		{
 			j = 0;
-			if (!format[i + 1])
+			if (!format[i + 1]) /* If the char after the format specifier is NULL, return -1 */
 				return (-1);
-			while (mods[j].mod)
+			while (mods[j].mod) /* Iterate through struct */
 			{
-				if (format[i + 1] == *(mods[j].mod))
+				if (format[i + 1] == *(mods[j].mod)) /* Evaluate char after the format specifier and implement corresponding print function if there is a match */
 				{
-					sum += mods[j].f(list), i += 2;
+					sum += mods[j].f(list), i += 2; /* Assign # of printed chars to the sum variable, and move format string index to the element after the format specifier */
 					break;
 				}
 				j++;
 			}
-			if (!mods[j].mod)
+			if (!mods[j].mod) /* If struct member is NULL, print char at format[i] and the following char, and increment format index and sum variable accordingly */
 			{
 				_putchar(format[i]), i++, sum++;
 				_putchar(format[i]), i++, sum++;
 			}
 		}
-		else
+		else /* Print char at format[i], and increment both the format index and the sum variable */
 			_putchar(format[i]), i++, sum++;
 	}
 	va_end(list);
-	return (sum);
+	return (sum); /* Return # of characters printed */
 }
