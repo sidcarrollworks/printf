@@ -1,17 +1,18 @@
-#ifndef HOLBERTON.H
-#define HOLBERTON.H
+#ifndef HOLBERTON_H
+#define HOLBERTON_H
 #include <stdarg.h>
-
-typedef struct mod
+#include <stdlib.h>
+typedef struct f_mod
 {
 	char *mod;
-	int (*f)(int a, int b);
+	int (*f)(va_list);
 } form_mod;
 
+int _putchar(char c);
 int _printf(const char *format, ...);
-int print_int(va_list arg);
-int print_float(va_list arg);
-int print_char(va_list arg);
-int print_str(va_list arg);
+int print_i(va_list);
+int print_c(va_list);
+int print_s(va_list);
+void _printihelp(int n);
 
 #endif
