@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include <stdio.h>
+#include <stdlib.h>
 /**
  * _printf - replicates the printf function
  * @format: input string with format modifiers
@@ -7,13 +7,12 @@
  */
 int _printf(const char *format, ...)
 {
-	unsigned int i, j, sum;
+	unsigned int i = 0, j = 0, sum = 0;
 	va_list list;
 	form_mod mods[] = {
 		{"c", print_c},
 		{"s", print_s},
 		{"d", print_i},
-		{"i", print_i},
 		{"%", print_p},
 		{NULL, NULL}
 	};
@@ -21,7 +20,6 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (-1);
 	va_start(list, format);
-	j = 0, i = 0, sum = 0;
 	while (format[i])
 	{
 		if (format[i] == '%')

@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * print_int - prints an integer number
- *
- *
+ * print_i - prints an integer number
+ * @list: input args
+ * Return: return the sum
  */
 int print_i(va_list list)
 {
@@ -11,7 +11,7 @@ int print_i(va_list list)
 	int i = 0;
 
 	_printihelp(n);
-	
+
 	if (n == 0)
 		i++;
 	if (n < 0)
@@ -25,9 +25,9 @@ int print_i(va_list list)
 }
 
 /**
- * print_char - prints a character
- *
- *
+ * print_c - prints a character
+ * @list: input arg
+ * Return: return the sum
  */
 int print_c(va_list list)
 {
@@ -40,9 +40,9 @@ int print_c(va_list list)
 }
 
 /**
- * print_string - prints a string
- *
- *
+ * print_s - prints a string
+ * @list: input arg
+ * Return: reutnr sum
  */
 
 int print_s(va_list list)
@@ -61,8 +61,9 @@ int print_s(va_list list)
 	return (sum);
 }
 /**
- *
- *
+ * print_p - handles the %
+ * @list: arg list
+ * Return: retuns 1
  */
 int print_p(va_list list)
 {

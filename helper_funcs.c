@@ -1,11 +1,15 @@
 #include "holberton.h"
 
+/**
+ * _printihelp - prints out a number
+ * @n: input number
+ */
 void _printihelp(int n)
 {
 	if (n == 0)
 		_putchar('0');
 
-	if (n < 0 )
+	if (n < 0)
 	{
 		_putchar('-');
 		n = -n;
