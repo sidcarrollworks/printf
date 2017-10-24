@@ -1,0 +1,32 @@
+.TH _printf 3 "October 24 2017" "v1" "_printf Manual"
+.SH NAME
+_printf - A function that simulates the C standard library function printf.
+.SH SYNOPSIS
+.B _printf
+.I FORMAT [ARGUMENT]
+.B ...
+.SH DESCRIPTION
+Print ARGUMENT(s) according to FORMAT with ARGUMENT(s) converted to proper type first.
+
+FORMAT controls the output. Interpreted sequences are:
+
+.B %c
+- Displays a character
+
+.B %s
+- Displays a string of characters
+
+.B %d
+- Displays an integer in decimal form
+
+.B %i
+- Displays an integer in decimal form
+
+.B %%
+- Displays a single '%' character
+
+Note: _printf requires the corresponding holberton.h header file for use.
+.SH AUTHORS
+Sid Carroll & Cam Moore
+.SH REPORTING BUGS
+Report _printf bugs to Sid Carroll and/or Cam Moore at Holberton School.
