@@ -21,8 +21,6 @@ int print_c(va_list list)
 {
 	char c = va_arg(list, int);
 
-	if (!c)
-		c = ' ';
 	_putchar(c);
 	return (1);
 }
