@@ -3,6 +3,7 @@
 /**
  * _printihelp - prints out a number
  * @n: input number
+ * Return: returns the sum
  */
 int _printihelp(int n)
 {
