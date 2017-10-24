@@ -12,11 +12,11 @@ int _printf(const char *format, ...)
 	form_mod mods[] = {
 		{"c", print_c},
 		{"s", print_s},
+		{"i", print_i},
 		{"d", print_i},
 		{"%", print_p},
 		{NULL, NULL}
 	};
-
 	if (format == NULL)
 		return (-1);
 	va_start(list, format);
