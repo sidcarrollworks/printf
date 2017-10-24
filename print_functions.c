@@ -8,11 +8,20 @@
 int print_i(va_list list)
 {
 	int n = va_arg(list, int);
+	int i = 0;
+
 	_printihelp(n);
-
-
-
-	return (1);
+	
+	if (n == 0)
+		i++;
+	if (n < 0)
+		i++;
+	while (n != 0)
+	{
+		n /= 10;
+		i++;
+	}
+	return (i);
 }
 
 /**
@@ -50,4 +59,14 @@ int print_s(va_list list)
 		i++, sum++;
 	}
 	return (sum);
+}
+/**
+ *
+ *
+ */
+int print_p(va_list list)
+{
+	(void) list;
+	_putchar('%');
+	return (1);
 }
