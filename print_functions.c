@@ -8,20 +8,8 @@
 int print_i(va_list list)
 {
 	int n = va_arg(list, int);
-	int i = 0;
 
-	_printihelp(n);
-
-	if (n == 0)
-		i++;
-	if (n < 0)
-		i++;
-	while (n != 0)
-	{
-		n /= 10;
-		i++;
-	}
-	return (i);
+	return (_printihelp(n));
 }
 
 /**

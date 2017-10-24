@@ -4,51 +4,28 @@
  * _printihelp - prints out a number
  * @n: input number
  */
-void _printihelp(int n)
+int _printihelp(int n)
 {
+	unsigned int un;
+	int sum = 0;
+
 	if (n == 0)
+	{
 		_putchar('0');
-
-	if (n < 0)
-	{
-		_putchar('-');
-		n = -n;
+		return (1);
 	}
-
-	if (n / 10)
-		_printihelp(n / 10);
-
-	_putchar(n % 10 + '0');
-}
-
-int print_nums(va_list list)
-{
-	int n = va_list(list, int);
-	int len = 0;
-	int div = 1;
-	int num;
-
-	num = n;
 	if (n < 0)
 	{
 		_putchar('-');
-		num *= -1;
-		len++;
+		un = -n;
+		sum++;
 	}
 	else
-	{
-		num = n;
-		while ((num / 10) >= 10)
-		{
-			div *= 10;
-		}
-		while (div > 0)
-		{
-			_putchar((num / div) + '0');
-			num %= div;
-			div /= 10;
-			len++;
-		}
-	}
-	return (len);
+		un = n;
+
+	if (un / 10)
+		sum += _printihelp(un / 10);
+
+	_putchar(un % 10 + '0');
+	return (sum + 1);
 }
