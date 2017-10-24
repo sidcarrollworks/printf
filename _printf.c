@@ -21,8 +21,7 @@ int _printf(const char *format, ...)
 	if (format == NULL) /* If string input is NULL, return -1 */
 		return (-1);
 	va_start(list, format);
-	/* i is the format index, j is the mods index, sum is the # of chars printed */
-	i = 0, j = 0, sum = 0;
+	i = 0, j = 0, sum = 0; /* i is the format index, j is the struct index, sum is the # of chars printed */
 	while (format[i]) /* Iterate through string argument */
 	{
 		if (format[i] == '%') /* Find format specifier */
