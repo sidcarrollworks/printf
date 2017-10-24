@@ -11,8 +11,8 @@ This is a project that simulates the C library function `printf`. Our simulation
 
 |   **File**    |  **Decription**                       |
 |---------------|---------------------------------------|
-| holberton.h   | header file with prototypes           |
-| printf.c      | contains main printf function         |
+| holberton.h   | Header file containing directives and function prototypes           |
+| printf.c      | Source file containing code that simulates the printf function         |
 | _putchar.c     | contains putchar function             |
 | string_specifiers.c | contains functions for **s** and **c** |
 | string_spec_helpers.c     | contains functions to help with string functions in string_specifiers.c|
