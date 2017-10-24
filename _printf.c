@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdlib.h>
 /**
  * _printf - replicates the printf function
  * @format: input string with format modifiers
