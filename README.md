@@ -11,3 +11,11 @@ This is a project that simulates the C library function function `printf`. Our s
 |  _putchar.c    |  Source file containing a `putchar` simulation function     |
 |  print_functions.c    |  Source file containing functions used for printing data    |
 |  helper_funcs.c    |  Source file containing functions used for manipulating data     |
+
+## Use of _printf
+To use _printf, follow these steps:
+
+1. Clone the respository by running the command 
+```
+$ git clone https://github.com/squidcarroll/printf.git
+```
