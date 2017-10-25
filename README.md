@@ -1,10 +1,10 @@
 # _printf - Simulation of the C Standard Library printf Function
 
-This is a project that simulates the C library function function `printf`. Our simulation function `_printf' is a variadic function which formats arguments into a character string and sends the formatted output to `stdout`.
+This is a project that simulates the C library function function `printf`. Our simulation function `_printf` is a variadic function which formats arguments into a character string and sends the formatted output to `stdout`.
 
 ## Getting Started
 
-These instructions will help you get a copy of _printf up and running your machine for development and testing purposes.
+These instructions will help you get a copy of `_printf` up and running your machine for development and testing purposes.
 
 ### Prerequisites
 
@@ -18,8 +18,6 @@ Follow the steps outlined below in order to get started with _printf:
 ```
 $ git clone https://github.com/squidcarroll/printf.git
 ```
-
-### Overview of Repository
 
 After cloning the repository, you should see the files below:
 
@@ -36,7 +34,7 @@ After cloning the repository, you should see the files below:
 $ gcc -Wall -Werror -Wextra -pedantic -I $PWD/printf printf/*.c <FILENAME>.c
 ```
 
-Note: <FILENAME> is a placeholder that should be replaced with a file name of your choosing.
+Note: `<FILENAME>` is a placeholder that should be replaced with a file name of your choosing.
 
 3. Try it out by using _printf in some of your code, e.g.
 ```
@@ -56,8 +54,11 @@ $ I love printing strings!
 This version of _printf works with the following format specifiers:
 
 `%c` - Displays a character
+
 `%s` - Displays a string
+
 `%d` or `%i` - Displays an integer in decimal form
+
 `%%` - Prints a single % character
 
 ### Authors
